@@ -1,0 +1,16 @@
+name: WorkTime
+channels:
+   - defaults
+   - conda-forge
+dependencies:
+   - python=3.11
+   - sqlalchemy
+   - fastapi
+   - uvicorn
+   - gunicorn
+   - python-dotenv
+   - alembic
+   - asyncpg
+   - pytest
+   - time-machine
+prefix: /opt/miniconda3/envs/WorkTime
