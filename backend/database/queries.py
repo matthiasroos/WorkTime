@@ -64,8 +64,7 @@ async def get_entry(db: sqlalchemy.ext.asyncio.AsyncConnection, entry_id: uuid.U
         entry_model = backend.database.models.Entry
         result = await connection.execute(
             sqlalchemy.select(
-                from_obj=entry_model,
-                columns=entry_model.__table__.columns
+                entry_model,
             ).where(entry_model.id == entry_id))
     return result.first()
 
